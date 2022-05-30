@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+        <title>Minhas bandas favoritas</title>
+    </head>
+
+    <body>
+        <h1>Minhas bandas favoritas</h1>
+
+        <ul class="tree">
+            <li>
+               <span class="pasta">Queen</span> 
+                <ul>
+                    <li>
+                        <span class="pasta">A Night At The Opera</span>
+                        <ul>
+                            <li>Bohemian Rhapsody</li>
+                            <li>39</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="pasta">A Day At The Races</span>
+                        <ul>
+                            <li>Somebody To Love</li>
+                            <li>Tie Your Mother Down</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="pasta">Mentalist</span>
+                <ul>
+                    <li>
+                        <span class="pasta">Freedom Of Speech</span>
+                        <ul>
+                            <li>Life</li>
+                            <li>Freedom of the Press</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="pasta">A Journey Into The Unknow</span>
+                        <ul>
+                            <li>An Ocean So Deep</li>
+                            <li>A Journey Into the Unknow</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="pasta">Avantasia</span>
+                <ul>
+                    <li>
+                        <span class="pasta">The Metal Opera Pt. II</span>
+                        <ul>
+                            <li>The Seven Angels</li>
+                            <li>The Looking Glass</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="pasta">MoonGlow</span>
+                        <ul>
+                            <li>The Raven Child</li>
+                            <li>MoonGlow</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            document.querySelectorAll('.pasta').forEach(folder => {
+                    folder.onclick = function(e) {
+                    const ul = folder.nextElementSibling
+                    const lista = ul.style.display
+                    ul.style.display = lista === 'none' ? 'block' : 'none'
+                }
+            })
+        </script>
+    </body>
+</html>
